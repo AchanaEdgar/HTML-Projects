@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f, TEAL);
+    color: white;
+}
+.container{
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.clock{
+    width: 100%;
+    height: 100%;
+    background: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+
+.container::before{
+    content: "";
+    width: 180px;
+    height: 180px;
+    background: #b9044f;
+    border-radius: 10px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+}
+.container::after{
+    content: "";
+    width: 180px;
+    height: 180px;
+    background: grey;
+    border-radius: 50%;
+    position: absolute;
+    right: -80px;
+    bottom: -70px;
+    z-index: -1;
+}
+.clock span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.clock span::after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -20px ;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#hours::after{
+    content: "HOURS";
+}
+#minutes::after{
+    content: "MINUTES";
+}
+#seconds::after{
+    content: "SECONDS";
+}
+#periodDisplay {
+    visibility: hidden; /* Initially hide */
+    font-size: 30px;
+    margin-left: 10px;
+}
+#btn1{
+    width: 150px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    border: solid 2px white;
+    height: 60px;
+    position: absolute;
+    margin: 10px;
+    border-radius: 10px;
+    margin-left: 350px;
+    color: white;
+    background: transparent;
+}
+#btn1:hover{
+    border: solid 2px white;
+    color: teal;
+    background: white;
+    cursor: pointer;
+}
+.container1{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, teal, lightblue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calculator{
+    background-color: grey;
+    padding: 20px;
+    border-radius: 10px;
+}
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+form .display{
+display: flex;
+justify-content: flex-end;
+margin: 20px 0;
+}
+form .display input{
+    text-align: right;
+    flex: 1; 
+    font-size: 50px;
+    box-shadow: none;
+}
+form input .equal{
+    width: 120px;
+
+}
+#btn2 {
+    margin: 50px;
+    width: 100px;
+    font-size: 16px;
+    border: solid 2px white;
+    height: 40px;
+    color: white;
+    background: transparent;
+    border-radius: 5px;
+}
+#btn2:hover{
+    border: solid 2px white;
+    color: teal;
+    background: white;
+    cursor: pointer;
+}
+.container2{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, coral, cornsilk);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
